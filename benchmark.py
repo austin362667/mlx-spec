@@ -3,15 +3,17 @@ from mlx_lm import load
 
 
 DRAFT_MODEL_SIZE = "0.6B"
-TARGET_MODEL_SIZE = "1.7B"
-# full-weights fine-tuned
-DISTILLED_DRAFT_MODEL_NAME  = f"Austin362667/Qwen3-{DRAFT_MODEL_SIZE}-MLX-bf16-python-18k-alpaca"
+TARGET_MODEL_SIZE = "4B"
+# full-weights fine-tuned:
+# 1. training dataset resampled python data by Qwen3-4B ([SpecFroge: Regenerate Datasets](https://docs.sglang.io/SpecForge/basic_usage/data_preparation.html#regenerate-datasets))
+# 2. distilled from Qwen3-4B as the teacher model.
+DISTILLED_DRAFT_MODEL_NAME = f"Austin362667/Qwen3-{DRAFT_MODEL_SIZE}-MLX-bf16-python-5k-alpaca-resampled-Qwen-4B"
 # not fine-tuned
 DRAFT_MODEL_NAME  = f"Qwen/Qwen3-{DRAFT_MODEL_SIZE}-MLX-bf16"
 # the model we want to speed up
 TARGET_MODEL_NAME = f"Qwen/Qwen3-{TARGET_MODEL_SIZE}-MLX-bf16"
 
-MAX_NEW_TOKENS = 64
+MAX_NEW_TOKENS = 256
 K = 3
 
 VERBOSE = False
