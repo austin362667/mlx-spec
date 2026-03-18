@@ -1,0 +1,13 @@
+[project]
+name = "mlx-spec"
+version = "0.1.0"
+description = "Speculative decoding in MLX"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mlx; sys_platform == 'darwin'",
+    "mlx[cuda]; sys_platform == 'linux'",   
+    "mlx-lm",
+    "datasets",
+    "wandb",
+]
