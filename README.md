@@ -1,6 +1,22 @@
 # mlx-spec
 Speculative Decoding in MLX
 
+## Setup
+
+1. Install [`uv`](https://docs.astral.sh/uv/)
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+2. Create `venv`
+```bash
+uv venv --python 3.11
+```
+
+3. Install dependencies
+```bash
+uv sync
+```
 
 ## Quick start
 
@@ -8,10 +24,9 @@ Speculative Decoding in MLX
 uv run python -m benchmark
 ```
 
+## Benchmark Results
 
-## Benchmarks
-
-1. Target Model `Qwen3-4B` / Draft Model `Qwen3-0.6B` (on Apple M2)
+1. Target Model `Qwen3-4B` / Draft Model `Qwen3-0.6B` (on Apple M2 Base)
 
 ```
 ==============================
@@ -29,21 +44,4 @@ Model                               | Decoding TPS | Avg Accepted Len | Avg Spee
 Baseline                            | 9.383        | -                | 1.00
 Speculate with Non-distilled Draft  | 10.924       | 1.91             | 1.16
 Speculate with Distilled Draft      | 11.191       | 1.97             | 1.19
-```
-
-## Setup
-
-1. Install [`uv`](https://docs.astral.sh/uv/)
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-2. Create `venv`
-```bash
-uv venv --python 3.11
-```
-
-3. Install dependencies
-```bash
-uv sync
 ```
