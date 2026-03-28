@@ -49,3 +49,7 @@ Baseline                            | 9.383        | -                | 1.00
 Speculate with Non-distilled Draft  | 10.924       | 1.91             | 1.16
 Speculate with Distilled Draft      | 11.191       | 1.97             | 1.19
 ```
+
+2. Target Model `Qwen3-1.7B` ,`Qwen3-4B`, `Qwen3-8B` / Draft Model `Qwen3-0.6B` (on Apple M2 Pro)
+
+![Decoding speedup over baseline and average acceptance length (τ ) on Qwen3 draft models with thinking mode disabled and a maximum of 512 output tokens.png](./Table%202:%20Decoding%20speedup%20over%20baseline%20and%20average%20acceptance%20length%20(τ%20)%20on%20Qwen3%20draft%20models%20with%20thinking%20mode%20disabled%20and%20a%20maximum%20of%20512%20output%20tokens.png)
