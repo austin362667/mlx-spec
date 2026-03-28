@@ -1,5 +1,9 @@
 # mlx-spec
-Speculative Decoding in MLX
+Speculative Decoding with MLX on Apple Silicon.
+
+- Reproduce basic speculative decoding algoratihm in `inference.py::_speculative_decode`.
+- Domain-Specific (Python coding)  draft model training.
+- Benchmarks
 
 ## Setup
 
