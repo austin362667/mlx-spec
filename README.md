@@ -5,6 +5,13 @@ Speculative Decoding with MLX on Apple Silicon.
 - Domain-Specific (Python coding)  draft model training.
 - Benchmarks
 
+
+Studied whether on-policy KD of a domain-specific draft model increases accepted token length.
+Distilled `Qwen3-0.6B` into a Python-coding draft model on MLX-LM using target-resampled training data.
+Achieving 1.33x speedup vs. 1.27x without resampling.
+
+
+
 ## Setup
 
 1. Install [`uv`](https://docs.astral.sh/uv/)
